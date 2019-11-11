@@ -68,4 +68,25 @@ describe("Thermostat", function() {
         thermostat.resetTemperature();
         expect(thermostat.getCurrentTemperature()).toEqual(20)
     })
+
+    it('should be able to get energy usage - High', () => {
+        thermostat.switchMode();
+        for (let i = 0; i < 10; i++) {
+            thermostat.up();
+        };
+
+        expect(thermostat.energyUsage()).toEqual("high-usage");
+    });
+
+    it('should be able to get energy usage - Low', () => {
+        for (let i = 0; i < 5; i++) {
+            thermostat.down();
+        };
+
+        expect(thermostat.energyUsage()).toEqual("low-usage");
+    });
+
+    it('should be able to get energy usage - Medium', () => {
+        expect(thermostat.energyUsage()).toEqual("medium-usage");
+    });
 });
