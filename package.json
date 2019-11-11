@@ -1,0 +1,22 @@
+{
+  "name": "thermostat",
+  "version": "1.0.0",
+  "description": "afternoon challenge for javascript week at makers",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robbaile/thermostat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robbaile/thermostat/issues"
+  },
+  "homepage": "https://github.com/robbaile/thermostat#readme",
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
