@@ -28,4 +28,20 @@ describe("Thermostat", function() {
         };
         expect(thermostat.getCurrentTemperature()).toEqual(10)
     });
+
+    it('should have a power saving mode and set to true automatically', () => {
+        expect(thermostat.isPowerSavingActive()).toEqual(true);
+    })
+
+    it('should be able to switch power saving off', () => {
+        thermostat.switchMode()
+        expect(thermostat.isPowerSavingActive()).toEqual(false);
+    })
+
+    it('should be able to switch power saving on and off', () => {
+        thermostat.switchMode();
+        expect(thermostat.isPowerSavingActive()).toEqual(false);
+        thermostat.switchMode();
+        expect(thermostat.isPowerSavingActive()).toEqual(true);
+    })
 });
