@@ -1,3 +1,5 @@
+'use strict';
+
 describe("Plane", function() {
     let Thermostat = require('../lib/thermostat');
     var thermostat;
@@ -7,6 +9,6 @@ describe("Plane", function() {
     });
 
     it('should have a random flight number generated', () => {
-        expect(thermostat.temperature).toEqual(20)
+        expect(thermostat.getCurrentTemperature()).toEqual(20)
     });
 });
