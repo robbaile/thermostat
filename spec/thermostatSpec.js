@@ -1,6 +1,6 @@
 'use strict';
 
-describe("Plane", function() {
+describe("Thermostat", function() {
     let Thermostat = require('../lib/thermostat');
     var thermostat;
     
