@@ -54,10 +54,18 @@ describe("Thermostat", function() {
 
     it('should only be able to go to 32 degress when power saving is off', () => {
         thermostat.switchMode();
-        console.log(thermostat.MAXIMUMTEMPERATURE)
         for (let i = 0; i < 14; i++) {
             thermostat.up();
         };
         expect(thermostat.getCurrentTemperature()).toEqual(32)
+    });
+
+    it('should be able to reset temperature', () => {
+        for (let i = 0; i < 4; i++) {
+            thermostat.up();
+        };
+
+        thermostat.resetTemperature();
+        expect(thermostat.getCurrentTemperature()).toEqual(20)
     })
 });
